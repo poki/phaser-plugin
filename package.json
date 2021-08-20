@@ -1,0 +1,16 @@
+{
+  "name": "phaser-plugin",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "start": "parcel ./example/index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0"
+  },
+  "dependencies": {
+    "phaser": "^3.55.2"
+  }
+}
