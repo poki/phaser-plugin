@@ -5,7 +5,7 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "start": "parcel ./example/index.html"
+    "watch": "parcel ./example/index.html"
   },
   "devDependencies": {
     "parcel": "^2.0.0-rc.0"
