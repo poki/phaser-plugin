@@ -34,5 +34,6 @@ export default class Game extends Phaser.Game {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Game(config)
+  const game = new Game(config)
+  window.game = game
 })

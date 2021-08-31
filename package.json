@@ -5,12 +5,14 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "watch": "parcel ./example/index.html"
-  },
-  "devDependencies": {
-    "parcel": "^2.0.0-rc.0"
+    "watch": "parcel ./example/index.html",
+    "lint": "standard"
   },
   "dependencies": {
     "phaser": "^3.55.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0",
+    "standard": "^16.0.3"
   }
 }
