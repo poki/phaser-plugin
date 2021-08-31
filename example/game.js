@@ -11,8 +11,8 @@ const config = {
   plugins: {
     global: [
       {
-        key: 'poki',
         plugin: PokiPlugin,
+        key: 'poki',
         start: true,
         data: {
           loadingScene: 'LoadingScene',
