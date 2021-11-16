@@ -2,7 +2,7 @@
 
 ## TODO:
 
-- [ ] Get it to work localhost
+- [x] Get it to work localhost
 - [x] Auto mute & Disable keyboard input
 - [ ] Extend example with buttons to show off all plugin features (e.g. rewarded ad)
 - [ ] Write readme & instructions
