@@ -1,7 +1,8 @@
 {
   "name": "phaser-plugin",
   "version": "0.0.1",
-  "main": "lib/index.js",
+  "source": "lib/index.js",
+  "main": "dist/phaser-poki.js",
   "license": "ISC",
   "private": true,
   "scripts": {
@@ -12,7 +13,7 @@
     "phaser": "^3.55.2"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
+    "parcel": "^2.0.1",
     "standard": "^16.0.3"
   }
 }
