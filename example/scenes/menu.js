@@ -27,19 +27,21 @@ export default class MenuScene extends Phaser.Scene {
     // Run the following code when the PokiSDK has been initialized, we need this
     // to determine if the player has an adblocker installed. When the PokiSDK
     // was already initialized the callback is ran immediately.
-    poki.runInitialized((poki) => {
-      console.log('runInitialized')
-      if (poki.adblock) {
+    poki.runWhenInitialized((poki) => {
+      console.log('PokiSDK has been initialized')
+
+      if (poki.hasAdblock) {
         this.add.text(10, 10, 'Adblock detected!', {
           fill: 'black'
         })
       }
 
-      if (!poki.adblock) {
+      if (!poki.hasAdblock) {
+        // When ads are available: enable the rewarded ad button:
         this.rewardButton.setTint(0x000000)
         this.rewardButton.setInteractive({ useHandCursor: true })
         this.rewardButton.addListener('pointerdown', () => {
-          // This helper function will mute and disable keyboard input.
+          // This function will mute and disable keyboard input for you
           poki.rewardedBreak().then((success) => {
             if (success) {
               // Give coins!

@@ -18,8 +18,8 @@ const config = {
         key: 'poki',
         start: true,
         data: {
-          loadingScene: 'LoadingScene',
-          gameplayScene: 'PlayScene',
+          loadingSceneKey: 'LoadingScene',
+          gameplaySceneKey: 'PlayScene',
           autoCommercialBreak: true
         }
       }

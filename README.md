@@ -51,11 +51,11 @@ const config = {
         key: 'poki',
         start: true, // must be true, in order to load
         data: {
-          // This must be the name of your loading scene
-          loadingScene: 'LoadingScene',
+          // This must be the key/name of your loading scene
+          loadingSceneKey: 'LoadingScene',
 
-          // This must be the name of your game (gameplay) scene
-          gameplayScene: 'PlayScene',
+          // This must be the key/name of your game (gameplay) scene
+          gameplaySceneKey: 'PlayScene',
 
           // This will always request a commercialBreak when gameplay starts,
           // set to false to disable this behaviour (recommended to have true,
@@ -71,6 +71,43 @@ var game = new Phaser.Game(config)
 ```
 (more info on Phaser's configuration 
 [here](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/game/))
+
+
+### Usage
+
+#### Loading & Gameplay Events
+
+The Poki Phaser plugin will automatically call `PokiSDK.gameLoadingStart()` and
+`PokiSDK.gameLoadingStop();` if the _loadingSceneKey_ is configured. The same is
+true for the set _gameplaySceneKey_.
+
+If your game doesn't use multiple scenes for gameplay you can manually call
+the events like so:
+
+```javascript
+const poki = scene.plugins.get('poki') // get the plugin from the Phaser PluginManager
+poki.gameplayStart()
+// ... start gameplay ...
+scene.on('player_died', () => {
+  poki.gameplayStop()
+})
+```
+
+#### On Initialized
+
+To run code only when the PokiSDK is initialized you can use the following 
+interface:
+
+```javascript
+const poki = scene.plugins.get('poki') // get the plugin from the Phaser PluginManager
+poki.runWhenInitialized((poki) => {
+  // This is called after the PokiSDK is fully initialized, or immediately if
+  // the PokiSDK has already been initialized.
+  if (poki.hasAdblock) {
+    console.log('😢')
+  }
+})
+```
 
 
 ## Example
@@ -105,11 +142,11 @@ left before we can publish it for general use:
 - [x] Extend example with buttons to show off all plugin features (e.g. rewarded 
       ad)
 - [x] Write readme & instructions
-- [ ] Go over all exposed function/variable names
+- [x] Go over all exposed function/variable names
 - [ ] Package into downloadable .js and publish to npm
 - [ ] Test it in an existing game
 
-## Credits
+## Asset Credits
 
 Background music credits:
 https://github.com/photonstorm/phaser-examples/blob/master/examples/assets/audio/bodenstaendig_2000_in_rock_4bit.mp3
