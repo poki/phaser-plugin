@@ -3,7 +3,7 @@ import Phaser from 'phaser'
 import { PokiPlugin } from '../lib'
 // In this example we use '../lib' because it's in the same repository, in
 // an actual project you should use:
-//   import { PokiPlugin } from 'poki-phaser-3'
+//   import { PokiPlugin } from '@poki/phaser-3'
 
 import LoadingScene from './scenes/loading'
 

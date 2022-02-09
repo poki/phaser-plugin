@@ -1,4 +1,7 @@
 # Poki Phaser 3 Plugin
+A Phaser 3 plugin to easially integrate the Poki SDK
+
+- - -
 
 Hi! 👋 This is the official Poki Phaser Plugin for 
 [Phaser 3](https://phaser.io/phaser3). This plugin will automate most of 
@@ -26,12 +29,12 @@ always check the example in the [/example](example/) directory.
 
 ### Add the dependency
 
-First, you have to make sure to add the `poki-phaser-3` plugin as a dependency 
-to  your project:
+First, you have to make sure to add the `@poki/phaser-3` plugin as a dependency 
+to your project:
 ```bash
-$ npm install --save-dev poki-phaser-3
+$ npm install --save-dev @poki/phaser-3
 # or
-$ yarn add --dev poki-phaser-3
+$ yarn add --dev @poki/phaser-3
 ```
 <small>(note: at the time of writing, not yet published to npm)</small>
 
@@ -40,7 +43,7 @@ $ yarn add --dev poki-phaser-3
 Step two is to add the plugin to the plugins section of your Phaser 
 configuration, for example:
 ```javascript
-import { PokiPlugin } from 'poki-phaser-3'
+import { PokiPlugin } from '@poki/phaser-3'
 // ...
 const config = {
   // ...
@@ -131,20 +134,6 @@ Server running at http://localhost:1234
 ```
 And point your browser to http://localhost:1234
 
-
-## TODO
-
-This project is currently in an early development phase. These steps are still 
-left before we can publish it for general use:
-
-- [x] Get it to work localhost
-- [x] Auto mute & Disable keyboard input
-- [x] Extend example with buttons to show off all plugin features (e.g. rewarded 
-      ad)
-- [x] Write readme & instructions
-- [x] Go over all exposed function/variable names
-- [ ] Package into downloadable .js and publish to npm
-- [ ] Test it in an existing game
 
 ## Asset Credits
 
