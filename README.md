@@ -36,7 +36,6 @@ $ npm install --save-dev @poki/phaser-3
 # or
 $ yarn add --dev @poki/phaser-3
 ```
-<small>(note: at the time of writing, not yet published to npm)</small>
 
 ### Install plugin to Phaser's configuration
 
