@@ -2,7 +2,7 @@
   "name": "@poki/phaser-3",
   "repository": "https://github.com/poki/phaser-plugin",
   "description": "A Phaser 3 plugin to easially integrate the Poki SDK",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "source": "lib/index.js",
   "main": "dist/phaser-poki.js",
   "license": "ISC",
