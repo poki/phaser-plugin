@@ -2,12 +2,6 @@ import Phaser from 'phaser'
 
 export default class MenuScene extends Phaser.Scene {
   create () {
-    if (!this.sound.get('background')) {
-      this.sound.play('background', {
-        volume: 0.1
-      })
-    }
-
     this.playButton = this.add.text(640, 460, 'Start!', {
       font: '48px Impact',
       fill: 'black'
@@ -43,6 +37,7 @@ export default class MenuScene extends Phaser.Scene {
         this.rewardButton.addListener('pointerdown', () => {
           // This function will mute and disable keyboard input for you
           poki.rewardedBreak().then((success) => {
+            console.log('should rewards?', success)
             if (success) {
               // Give coins!
             }
