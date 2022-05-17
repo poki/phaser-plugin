@@ -37,6 +37,7 @@ export default class MenuScene extends Phaser.Scene {
         this.rewardButton.addListener('pointerdown', () => {
           // This function will mute and disable keyboard input for you
           poki.rewardedBreak().then((success) => {
+            console.log('should rewards?', success)
             if (success) {
               // Give coins!
             }
