@@ -132,9 +132,3 @@ $ yarn watch
 Server running at http://localhost:1234
 ```
 And point your browser to http://localhost:1234
-
-
-## Asset Credits
-
-Background music credits:
-https://github.com/photonstorm/phaser-examples/blob/master/examples/assets/audio/bodenstaendig_2000_in_rock_4bit.mp3
