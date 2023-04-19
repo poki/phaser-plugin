@@ -32,9 +32,9 @@ always check the example in the [/example](example/) directory.
 First, you have to make sure to add the `@poki/phaser-3` plugin as a dependency 
 to your project:
 ```bash
-$ npm install --save-dev @poki/phaser-3
+$ npm install @poki/phaser-3
 # or
-$ yarn add --dev @poki/phaser-3
+$ yarn add @poki/phaser-3
 ```
 
 ### Install plugin to Phaser's configuration
