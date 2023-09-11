@@ -18,9 +18,8 @@ Phaser.
 - Disable input and audio during video ads
 - Give you easy/global access to the SDK using `scene.plugins.get('poki')` 
   so you can:
-  - check if users have any adblock enabled;
-  - request a _rewardedBreak_
-
+    - request a _rewardedBreak_
+    - or manually make gameplayStart/gameplayStop
 
 ## How to use/install
 
@@ -105,9 +104,6 @@ const poki = scene.plugins.get('poki') // get the plugin from the Phaser PluginM
 poki.runWhenInitialized((poki) => {
   // This is called after the PokiSDK is fully initialized, or immediately if
   // the PokiSDK has already been initialized.
-  if (poki.hasAdblock) {
-    console.log('😢')
-  }
 })
 ```
 
