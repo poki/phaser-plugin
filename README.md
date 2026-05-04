@@ -107,6 +107,44 @@ poki.runWhenInitialized((poki) => {
 })
 ```
 
+#### Extended SDK Surface
+
+The plugin now exposes most Poki SDK methods directly on
+`scene.plugins.get('poki')`, including ad helpers, user/auth helpers, share URL
+helpers, error reporting, playtest capture controls, and misc utility methods.
+
+The raw `PokiSDK.init(options)` method is intentionally **not** exposed on the
+plugin instance because Phaser already uses `plugin.init(data)` for plugin
+bootstrapping. The plugin continues to load and initialize the Poki SDK for you
+automatically.
+
+Async passthrough methods such as `getUser()`, `getToken()`, `login()`, and
+`shareableURL()` wait until the SDK initialization attempt finishes. If the SDK
+is unavailable, they reject with an error instead of hanging forever. Use
+`runWhenInitialized()` as the readiness gate. `getURLParam()` falls back to
+`window.location.search` before the SDK is ready, and `getLanguage()` returns
+an empty string until the SDK can answer.
+
+```javascript
+import { RewardedBreakSize } from '@poki/phaser-3'
+
+const poki = scene.plugins.get('poki')
+
+poki.runWhenInitialized(async (poki) => {
+  const rewarded = await poki.rewardedBreak({
+    onStart: () => {
+      console.log('Rewarded break started')
+    },
+    size: RewardedBreakSize.MEDIUM
+  })
+
+  if (rewarded) {
+    const shareUrl = await poki.shareableURL({ level: 3, score: 1200 })
+    console.log('Share URL:', shareUrl)
+  }
+})
+```
+
 
 ## Example
 

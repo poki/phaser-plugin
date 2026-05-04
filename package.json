@@ -5,6 +5,7 @@
   "version": "0.0.5",
   "source": "lib/index.js",
   "main": "dist/phaser-poki.js",
+  "types": "lib/index.d.ts",
   "license": "ISC",
   "scripts": {
     "watch": "parcel ./example/index.html",
