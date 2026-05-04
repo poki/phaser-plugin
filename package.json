@@ -10,7 +10,6 @@
   "scripts": {
     "watch": "parcel ./example/index.html",
     "build": "rm -rf dist && parcel build",
-    "build-publish": "rm -rf dist && parcel build && yarn publish",
     "lint": "standard"
   },
   "targets": {
